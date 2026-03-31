@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,13 +39,47 @@ public class Application
 
          */
         System.out.println("---------------------------");
+        /*
         Path path= Paths.get("studenti_in.txt");
+        HashMap<Integer, Student> studentiMap = new HashMap<>();
         try(Scanner sc=new Scanner(path)){
             while(sc.hasNextLine()){
+                int nrMatricol = sc.nextInt();
+                String prenume = sc.next();
+                String nume = sc.next();
+                String formatieDeStudiu = sc.next();
+
+
+                Student s = new Student(nrMatricol, prenume, nume,formatieDeStudiu);
+
+                studentiMap.put(nrMatricol, s);
                 System.out.println(sc.nextLine());
             }
         }catch (IOException e) {
             e.printStackTrace();
         }
+
+        Path path2= Paths.get("note_anon.txt");
+        try (Scanner sc = new Scanner(path2)) {
+
+            while (sc.hasNext()) {
+                int nrMatricol = sc.nextInt();
+                float nota = sc.nextFloat();
+
+                Student s = studentiMap.get(nrMatricol);
+
+                if (s != null) {
+                    s.setNota(nota);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+        */
+        HashMap<Integer, Student> bursieri = new HashMap<>();
+        bursieri.put(new StudentBursieri(1025,"Andrei","Popa","ISM141/2",8.70,725.50));
+
     }
 }
