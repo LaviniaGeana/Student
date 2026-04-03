@@ -14,6 +14,7 @@ public class Student
         this.numarMatricol=numarMatricol;
         this.prenume=prenume;
         this.nume=nume;
+        this.formatieDeStudiu=formatieDeStudiu;
 
     }
 
@@ -62,7 +63,7 @@ public class Student
     @Override
     public String toString()
     {
-        return String.format("%15d %15s %15s %15s %15d",numarMatricol, prenume, nume, formatieDeStudiu, nota);
+        return String.format("%15d %15s %15s %15s %15f",numarMatricol, prenume, nume, formatieDeStudiu, nota);
     }
 
     public void setNota(double nota) {

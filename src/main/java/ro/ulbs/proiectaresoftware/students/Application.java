@@ -1,5 +1,6 @@
 package ro.ulbs.proiectaresoftware.students;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -78,8 +79,25 @@ public class Application
 
         }
         */
-        HashMap<Integer, Student> bursieri = new HashMap<>();
-        bursieri.put(new StudentBursieri(1025,"Andrei","Popa","ISM141/2",8.70,725.50));
+       List<StudentBursieri> bursieri = new ArrayList<>();
 
+       bursieri.add(new StudentBursieri(1025,"Andrei","Popa","ISM141/2",8.70F,725.50));
+       bursieri.add(new StudentBursieri(1024,"Ioan","Mihalcea","ISM141/1",9.80F,801.10));
+       bursieri.add(new StudentBursieri(1026,"AnaMaria","Prodan","TI131/1",8.90F,745.50));
+       bursieri.add(new StudentBursieri(1029,"Bianca","Popescu","TI131/1",9.10F,780.80));
+
+       SalvareInFisier("bursieri_out.txt",bursieri);
+
+    }
+    public static void SalvareInFisier(String fisier,List<StudentBursieri> bursieri)
+    {
+        try(FileWriter writer = new FileWriter(fisier)){
+            for(StudentBursieri s:bursieri){
+                writer.write(s.toString()+"\n");
+            }
+            System.out.println("Salvare in fisier");
+        } catch (IOException e) {
+            System.out.println("Eroare: "+e.getMessage());
+        }
     }
 }

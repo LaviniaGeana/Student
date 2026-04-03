@@ -27,9 +27,7 @@ public class StudentBursieri extends Student
 
     @Override
     public String toString() {
-        return "StudentBursieri{" +
-                "cuantumBursa=" + cuantumBursa +
-                '}';
+        return super.toString()+String.format(" %15f",cuantumBursa);
     }
 
 }
