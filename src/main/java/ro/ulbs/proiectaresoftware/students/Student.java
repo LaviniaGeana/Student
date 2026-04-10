@@ -60,6 +60,10 @@ public class Student
         this.formatieDeStudiu = formatieDeStudiu;
     }
 
+    public double getNota() {
+        return nota;
+    }
+
     @Override
     public String toString()
     {
