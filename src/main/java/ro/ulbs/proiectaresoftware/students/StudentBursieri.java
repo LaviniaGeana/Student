@@ -9,7 +9,7 @@ public class StudentBursieri extends Student
     public StudentBursieri(int NumarMatricol,String prenume,String nume,String formatieDeStudiu,double nota,double cuantumBursa)
     {
         super(NumarMatricol,prenume,nume,formatieDeStudiu);
-        super.nota=nota;
+        super.setNota(nota);
         this.cuantumBursa=cuantumBursa;
     }
 
