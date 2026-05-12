@@ -113,7 +113,7 @@ public class Application
         //studenti = imparteInDouaFormatii(studenti, "TI 211_1", "TI 211_2");
       
         */
-
+        /*
        System.out.println("-------------Lab9--------------");
 
        List<Student> studentiCuNote=Arrays.asList(
@@ -139,6 +139,8 @@ public class Application
                 .filter(s -> s.getNota() <5)
                 .collect(Collectors.toList());
         System.out.println("b) "+studentiNota5);
+
+    */
 
 
 
