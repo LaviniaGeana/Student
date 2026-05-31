@@ -1,7 +1,7 @@
 package DesignPatterns;
 
 
-import Strategy.StudentiExport; // Importam interfata din pachetul vechi
+import Strategy.StudentiExport; 
 import ro.ulbs.proiectaresoftware.students.Student;
 import java.util.List;
 
